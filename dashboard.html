@@ -330,33 +330,82 @@ img {
             border-bottom: 3px solid #667eea;
         }
 
-        #bookmarksTab {
-            color: #666;
-        }
+
+#bookmarksContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: 200px;
+}
+
+#bookmarksContainer > div {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+#bookmarksContainer img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#bookmarksContainer h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+#bookmarksContainer p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#bookmarksContainer h4 {
+    color: #666;
+    margin: 15px 0 10px;
+}
+
+#bookmarksContainer ul {
+    margin-bottom: 15px;
+    columns: 2;
+    list-style-position: inside;
+    color: #555;
+}
+
+#bookmarksContainer li {
+    margin-bottom: 5px;
+}
+
+#bookmarksContainer button {
+    padding: 10px 20px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#bookmarksContainer button:hover {
+    background: #c82333;
+}
 
 
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
+#bookmarksContainer > div > div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    
-        #resultsContainer, #bookmarksContainer {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
 
-        .empty-message {
-            text-align: center;
-            color: #999;
-            padding: 50px;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
+#bookmarksSection:not(.hidden) {
+    display: block;
+}
         .recipe-card {
             border: 1px solid #ddd;
             border-radius: 10px;
